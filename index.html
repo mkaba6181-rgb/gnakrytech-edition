@@ -2122,12 +2122,13 @@ window.addEventListener('resize', () => {
 });
 
 // Mobile menu
-const mobileOverlay = document.getElementById('mobile-overlay');
 function toggleMobileMenu(){
+  const mobileOverlay = document.getElementById('mobile-overlay');
   const isOpen = mobileOverlay.classList.toggle('open');
   document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 function closeMobileMenu(){
+  const mobileOverlay = document.getElementById('mobile-overlay');
   mobileOverlay.classList.remove('open');
   document.body.style.overflow = '';
 }
