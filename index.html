@@ -960,24 +960,128 @@ footer{
   margin-top:2px;animation:fadeIn 0.3s ease;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== TOUCH / ANDROID ===== */
+*{-webkit-tap-highlight-color:transparent;}
+input,select,textarea,button{touch-action:manipulation;}
+input,select,textarea{font-size:16px !important;}
+
+/* ===== RESPONSIVE TABLETTE (≤900px) ===== */
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
   .nav-links,.nav-cta{display:none;}
   .nav-mobile-btn{display:flex;}
   .about-grid,.why-grid{grid-template-columns:1fr;}
   .about-visual{height:300px;}
-  .services-grid{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr 1fr;}
   .packages-grid{grid-template-columns:1fr;}
   .testimonials-grid{grid-template-columns:1fr;}
   .hero-question{font-size:clamp(1.5rem,5vw,3rem);white-space:normal;padding:0 2rem;}
   .contact-info{gap:2rem;}
   .privacy-content{flex-direction:column;gap:2rem;}
   .privacy-icon-wrap{width:80px;height:80px;}
-  .team-grid{grid-template-columns:1fr;max-width:380px;}
+  .team-grid{grid-template-columns:1fr 1fr;}
   .contact-form-wrap{grid-template-columns:1fr;}
-  .form-row-2{grid-template-columns:1fr;}
+  .form-row-2{grid-template-columns:1fr 1fr;}
   .contact-aside{display:none;}
+  #about,#services,#packages,#why,#faq{padding:5rem 4%;}
+  .privacy-section,#team{padding:5rem 4%;}
+  #contact{padding:5rem 4%;}
+  .why-quote{font-size:1.2rem;}
+  .footer-links{gap:1rem;}
+  .social-card{width:110px;padding:1.4rem 1rem;}
+}
+
+/* ===== RESPONSIVE MOBILE ANDROID (≤600px) ===== */
+@media(max-width:600px){
+  /* Navigation */
+  nav{padding:0.9rem 1.2rem;}
+  .nav-brand{font-size:1.1rem;}
+  .nav-logo img{width:32px;height:32px;}
+  .nav-mobile-btn span{width:22px;}
+
+  /* Hero */
+  #hero{height:400vh;}
+  .hero-question{font-size:clamp(1.3rem,6vw,2rem);padding:0 1.2rem;line-height:1.3;}
+  .hero-final h1{font-size:clamp(2.5rem,12vw,5rem);}
+  .hero-final p{font-size:0.8rem;letter-spacing:0.15em;}
+
+  /* Sections padding */
+  #about,#services,#packages,#why,#faq{padding:4rem 5%;}
+  .privacy-section,#team{padding:4rem 5%;}
+  #process{padding:4rem 5% !important;}
+  #contact{padding:4rem 5% !important;}
+  #social{padding:3rem 5% !important;}
+
+  /* Section headers */
+  .section-header{margin-bottom:3rem;}
+  .section-header h2{font-size:clamp(1.8rem,7vw,2.8rem);}
+  .section-header p{font-size:0.88rem;}
+
+  /* About */
+  .about-title{font-size:clamp(1.8rem,7vw,2.8rem);}
+  .about-stats{grid-template-columns:1fr 1fr;gap:1.2rem;}
+  .stat-number{font-size:2rem;}
+  .about-visual{display:none;}
+
+  /* Services */
+  .services-grid{grid-template-columns:1fr;}
+  .service-card{padding:2rem 1.5rem;}
+
+  /* Packages */
+  .package-card{padding:2rem 1.2rem;}
+  .package-price{font-size:2rem;}
+  .packages-note{font-size:0.75rem;padding:0 1rem;}
+
+  /* Process */
+  .process-step{min-width:calc(50% - 0.5rem);max-width:calc(50% - 0.5rem);padding:1.2rem 0.8rem;}
+  .process-step h4{font-size:0.8rem;}
+  .process-step p{font-size:0.72rem;}
+
+  /* Why */
+  .why-grid{gap:2rem;}
+  .why-quote{font-size:1.1rem;padding:1.5rem;}
+  .why-cta-block{padding:1.5rem;}
+
+  /* Privacy */
+  .privacy-icon-wrap{width:64px;height:64px;}
+  .privacy-badges{gap:0.5rem;}
+  .privacy-badge{font-size:0.75rem;padding:0.4rem 0.7rem;}
+
+  /* Team */
+  .team-grid{grid-template-columns:1fr;max-width:100%;}
+  .team-photo-wrap{height:220px;}
+  .team-info{padding:1.4rem;}
+  .team-name{font-size:1.2rem;}
+
+  /* FAQ */
+  .faq-question{font-size:0.88rem;padding:1.2rem 0;}
+  .faq-answer p{font-size:0.84rem;}
+
+  /* Contact form */
+  .form-row-2{grid-template-columns:1fr;}
+  .form-field input,
+  .form-field select,
+  .form-field textarea{padding:0.75rem 0.85rem;}
+  .form-actions{flex-direction:column;}
+  .btn-submit-pro,.btn-whatsapp-alt{width:100%;justify-content:center;}
+
+  /* Social */
+  .social-card{width:90px;padding:1.2rem 0.8rem;}
+  .social-card svg{width:22px;height:22px;}
+  .social-card span{font-size:0.65rem;}
+
+  /* Footer */
+  footer{flex-direction:column;text-align:center;gap:0.8rem;padding:1.5rem 5%;}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:0.8rem;}
+  .footer-links a{font-size:0.75rem;}
+
+  /* Buttons positions */
+  .whatsapp-float{bottom:1.2rem;right:1.2rem;width:48px;height:48px;}
+  #back-to-top{bottom:4.8rem;right:1.2rem;width:38px;height:38px;}
+
+  /* RGPD banner */
+  #rgpd-banner{padding:1rem 4%;flex-direction:column;gap:0.8rem;}
+  .rgpd-btns{width:100%;justify-content:flex-end;}
 }
 </style>
 </head>
